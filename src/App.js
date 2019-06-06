@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useCallback } from 'react';
+import { connect } from 'react-redux';
+import Numpad from './Numpad';
+import Field from './Field';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export const App = ({ equation, answer, valid, updateAnswer, newFormula }) => (
+    <div className="page">
+        <Field onClick={useCallback((e) => e.detail === 3 && newFormula(), [newFormula])}>
+            {equation}
+        </Field>
+        <Field className={valid ? '' : 'error'}>
+            {answer}
+        </Field>
+        <Numpad onChange={updateAnswer}/>
     </div>
-  );
-}
+);
 
-export default App;
+const mapState = ({ store: { equation, answer, valid } }) => ({
+    equation,
+    answer,
+    valid,
+});
+
+const mapDispatch = ({ store: { updateAnswerAsync, newFormulaAsync } }) => ({
+    updateAnswer: updateAnswerAsync,
+    newFormula: newFormulaAsync
+});
+
+const AppContainer = connect(mapState, mapDispatch)(App);
+
+export default AppContainer;
