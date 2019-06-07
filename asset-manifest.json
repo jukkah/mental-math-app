@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mental-math-app/static/css/main.ac96e083.chunk.css",
+    "main.js": "/mental-math-app/static/js/main.cf2c8448.chunk.js",
+    "main.js.map": "/mental-math-app/static/js/main.cf2c8448.chunk.js.map",
+    "runtime~main.js": "/mental-math-app/static/js/runtime~main.318e07eb.js",
+    "runtime~main.js.map": "/mental-math-app/static/js/runtime~main.318e07eb.js.map",
+    "static/js/2.aa77813f.chunk.js": "/mental-math-app/static/js/2.aa77813f.chunk.js",
+    "static/js/2.aa77813f.chunk.js.map": "/mental-math-app/static/js/2.aa77813f.chunk.js.map",
+    "index.html": "/mental-math-app/index.html",
+    "precache-manifest.4c3a1e28c0475d99e50035252ed3a106.js": "/mental-math-app/precache-manifest.4c3a1e28c0475d99e50035252ed3a106.js",
+    "service-worker.js": "/mental-math-app/service-worker.js",
+    "static/css/main.ac96e083.chunk.css.map": "/mental-math-app/static/css/main.ac96e083.chunk.css.map"
+  }
+}
